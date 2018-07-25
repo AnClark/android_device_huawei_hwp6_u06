@@ -63,8 +63,8 @@ BOARD_HAVE_BLUETOOTH := true
 BOARD_WPAN_DEVICE := true
 #BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/huawei/hwp6_u06/bluetooth
 
-#TARGET_PREBUILT_KERNEL := device/huawei/hwp6_u06/kernel
-TARGET_KERNEL_SOURCE := kernel/huawei/hwp6_u06
+TARGET_PREBUILT_KERNEL := device/huawei/hwp6_u06/kernel
+#TARGET_KERNEL_SOURCE := kernel/huawei/hwp6_u06
 TARGET_KERNEL_CONFIG := cm_k3v2oem1_defconfig
 
 # adb has root
@@ -122,7 +122,7 @@ BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_15x24.h\"
 
 BOARD_RECOVERY_SWIPE := true
 
-#TARGET_PREBUILT_RECOVERY_KERNEL := device/huawei/hwp6_u06/kernel
+TARGET_PREBUILT_RECOVERY_KERNEL := device/huawei/hwp6_u06/kernel
 # AnClark NOTE: Notice that Android 6.0 or above force applying selinux, so we must rewrite init.rc!
 #TARGET_RECOVERY_INITRC := device/huawei/hwp6_u06/recovery/init.rc
 
@@ -143,8 +143,11 @@ TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
 TW_INTERNAL_STORAGE_PATH := "/data/share"
 TW_INTERNAL_STORAGE_MOUNT_POINT := "data"
 
+TW_NO_USB_STORAGE := false
+
 TW_BRIGHTNESS_PATH := "/sys/devices/platform/k3_fb.1/leds/lcd_backlight0/brightness"
 
 # Enable logcat support! Yahoo!
 TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD := true
+
